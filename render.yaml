@@ -1,7 +1,21 @@
 services:
   - type: web
+<<<<<<< HEAD
     name: encodage-client
     env: python
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python main.py"
     plan: free
+=======
+    name: flask-ml-api
+    runtime: python
+    buildCommand: ""
+    startCommand: python main.py
+    envVars:
+      - key: GOOGLE_CREDENTIALS_JSON
+        value: <À REMPLIR dans Render dashboard>
+      - key: GOOGLE_SHEET_ID
+        value: <À REMPLIR dans Render dashboard>
+      - key: GOOGLE_DRIVE_FILE_ID_MODELE
+        value: <À REMPLIR dans Render dashboard>
+>>>>>>> a69ddf9 (Remplacement complet du projet par la nouvelle version)
