@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-credentials.json
-=======
-
 # Jetons, secrets ou fichiers sensibles
 credentials.json
 token.json
-
-# Mac / Linux / Windows system files
-.DS_Store
-Thumbs.db
-
->>>>>>> a69ddf9 (Remplacement complet du projet par la nouvelle version)

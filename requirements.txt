@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-pandas
-gspread
-oauth2client
-flask
-=======
 Flask
 pandas
 numpy
@@ -12,4 +6,3 @@ shap
 google-api-python-client
 google-auth
 google-auth-oauthlib
->>>>>>> a69ddf9 (Remplacement complet du projet par la nouvelle version)
