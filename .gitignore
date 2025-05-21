@@ -1,3 +1,26 @@
-# Jetons, secrets ou fichiers sensibles
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Environnement virtuel
+venv/
+env/
+.venv/
+.env/
+
+# Fichiers de logs
+*.log
+
+# Fichiers sensibles / secrets
 credentials.json
 token.json
+
+# Fichiers générés par l'IDE
+.idea/
+.vscode/
+
+# Docker
+docker-compose.override.yml

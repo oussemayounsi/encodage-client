@@ -1,16 +1,18 @@
 from flask import Flask, jsonify
 from script_encodage import run_encodage
 from traitement_script import run_traitement
+import os
 
 app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return jsonify({"message": "API est en ligne"})
 
 @app.route('/run_pipeline', methods=['GET'])
 def run_pipeline():
     try:
-        # 1. Encodage des clients
         encodage_result = run_encodage()
-        
-        # 2. Si encodage fait, lancer traitement
         if encodage_result != "Aucun client à encoder":
             traitement_result = run_traitement()
             return jsonify({
@@ -24,7 +26,6 @@ def run_pipeline():
                 "encodage": encodage_result,
                 "traitement": "Non exécuté, pas de nouveaux clients encodés"
             })
-
     except Exception as e:
         return jsonify({
             "status": "error",
@@ -32,4 +33,5 @@ def run_pipeline():
         }), 500
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+    port = int(os.environ.get('PORT', 8000))
+    app.run(host='0.0.0.0', port=port)

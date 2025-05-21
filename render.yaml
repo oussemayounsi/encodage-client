@@ -1,13 +1,10 @@
 services:
   - type: web
     name: flask-ml-api
-    runtime: python
-    buildCommand: ""
-    startCommand: python main.py
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python main.py"
     envVars:
       - key: GOOGLE_CREDENTIALS_JSON
-        value: <À REMPLIR dans Render dashboard>
       - key: GOOGLE_SHEET_ID
-        value: <À REMPLIR dans Render dashboard>
       - key: GOOGLE_DRIVE_FILE_ID_MODELE
-        value: <À REMPLIR dans Render dashboard>
