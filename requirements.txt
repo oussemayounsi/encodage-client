@@ -1,9 +1,12 @@
-flask
+Flask
 gspread
 oauth2client
 pandas
 numpy
 scikit-learn
-matplotlib
 shap
+google-api-python-client
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
 joblib
