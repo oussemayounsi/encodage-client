@@ -1,5 +1,5 @@
 from flask import Flask
-from encodage_client import run_encodage
+from script_encodage import run_encodage
 from traitement_script import run_traitement
 
 app = Flask(__name__)
