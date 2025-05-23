@@ -22,7 +22,7 @@ def pipeline():
         print(error_msg)
         return error_msg, 500
 
-@app.route("/", methods=["GET"])
+@app.route("/", methods=["GET", "POST"])
 @app.route("/run", methods=["GET", "POST"])
 def run_pipeline():
     return pipeline()
